@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="معهد آفاق المستقبل للتدريب والتعليم المهني - منصة رائدة في تقديم الدبلومات والبرامج المهنية والتقنية المعتمدة دون أي رسوم دفع أو اشتراك إلكتروني.">
+  <meta name="keywords" content="معهد مهني, تعليم تقني, تمريض مهني, طاقة شمسية, أمن سيبراني, تدريب حرفي, دبلوم معتمد">
+  <title>معهد آفاق المستقبل للتدريب والتعليم المهني | Future Horizons Institute</title>
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="navbar">
+    <div class="container navbar-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <div class="logo-text">
+          معهد آفاق المستقبل
+          <span>للتدريب والتعليم المهني</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">الرئيسية</a></li>
+          <li><a href="#courses" class="nav-link">الدبلومات والبرامج</a></li>
+          <li><a href="#calculator" class="nav-link">حاسبة المسار المهني</a></li>
+          <li><a href="#workshops" class="nav-link">الورش العملية</a></li>
+          <li><a href="#accreditation" class="nav-link">الاعتمادات</a></li>
+          <li><a href="#faq" class="nav-link">الأسئلة الشائعة</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn-accent" onclick="openEnrollmentModal()">
+          <i class="fas fa-edit"></i> طلب تسجيل مباشر
+        </button>
+      </div>
+
+      <button class="mobile-toggle" id="mobileToggleBtn" aria-label="القائمة">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-nav-links">
+      <li><a href="#hero" class="mobile-nav-link">الرئيسية</a></li>
+      <li><a href="#courses" class="mobile-nav-link">الدبلومات والبرامج</a></li>
+      <li><a href="#calculator" class="mobile-nav-link">حاسبة المسار المهني</a></li>
+      <li><a href="#workshops" class="mobile-nav-link">الورش العملية</a></li>
+      <li><a href="#accreditation" class="mobile-nav-link">الاعتمادات والشهادات</a></li>
+      <li><a href="#faq" class="mobile-nav-link">الأسئلة الشائعة</a></li>
+    </ul>
+    <div style="margin-top: 1.5rem;">
+      <button class="btn-accent" style="width: 100%;" onclick="openEnrollmentModal()">
+        <i class="fas fa-edit"></i> طلب تسجيل مباشر
+      </button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span>التسجيل للعام التدريبي 2026/2027 مفتوح الآن بدون أي رسوم</span>
+        </div>
+        <h1 class="hero-title">
+          صمّم مستقبلك المهني مع <span class="gradient-text-amber">أحدث الخبرات التطبيقية المعتمدة</span>
+        </h1>
+        <p class="hero-desc">
+          معهد آفاق المستقبل يُقدم بيئة تعليمية وتقنية متكاملة تهدف إلى إكساب الشباب والمهنيين المهارات الحقيقية المطلوبة في سوق العمل في مجالات التكنولوجيا، الصحة، الهندسة والتصميم.
+        </p>
+        <div class="hero-cta">
+          <a href="#courses" class="btn-primary">
+            تصفّح البرامج التدريبية <i class="fas fa-arrow-left"></i>
+          </a>
+          <a href="#calculator" class="btn-outline">
+            <i class="fas fa-calculator"></i> حاسبة المسار المهني
+          </a>
+        </div>
+        <div class="hero-features">
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+            <div class="feature-info">
+              <h4>شهادات رسمية</h4>
+              <p>معتمدة وموثقة</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-laptop-code"></i></div>
+            <div class="feature-info">
+              <h4>مختبرات متطورة</h4>
+              <p>تدريب عملي 100%</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-user-shield"></i></div>
+            <div class="feature-info">
+              <h4>تسجيل مباشر</h4>
+              <p>بدون رسوم إلكترونية</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-card-image">
+          <img src="assets/images/hero.jpg" alt="معهد آفاق المستقبل للتدريب المهني">
+        </div>
+        <div class="hero-floating-stat">
+          <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
+          <div>
+            <div class="stat-num">+94%</div>
+            <div class="stat-lbl">نسبة توظيف الخريجين في سوق العمل</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses & Diplomas Section -->
+  <section id="courses" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">دليل المسارات التدريبية</span>
+        <h2 class="section-title">برامج الدبلوم والتأهيل المهني المعتمدة</h2>
+        <p class="section-subtitle">اختر التخصص الذي يناسب طموحك المهني واطلع على محتوى الوحدات والتطبيق العملي.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-category="all">كافة التخصصات</button>
+        <button class="filter-btn" data-category="tech">تكنولوجيا المعلومات</button>
+        <button class="filter-btn" data-category="healthcare">الرعاية الصحية والتمريض</button>
+        <button class="filter-btn" data-category="engineering">الهندسة والطاقة</button>
+        <button class="filter-btn" data-category="design">التصميم والإعلام</button>
+        <button class="filter-btn" data-category="business">إدارة الأعمال</button>
+      </div>
+
+      <!-- Live Search Box -->
+      <div class="search-wrapper">
+        <input type="text" id="courseSearchInput" class="search-input" placeholder="ابحث باسم التخصص، المهارة، أو الكلمة المفتاحية...">
+        <i class="fas fa-search search-icon"></i>
+      </div>
+
+      <!-- Courses Grid -->
+      <div id="coursesGrid" class="courses-grid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Career Path Calculator Section -->
+  <section id="calculator" class="section">
+    <div class="container">
+      <div class="glass-panel calc-card">
+        <div class="calc-grid">
+          <div>
+            <span class="section-tag" style="background: rgba(249, 115, 22, 0.12); color: var(--color-accent); border-color: rgba(249, 115, 22, 0.3);">
+              أداة تفاعلية ذكية
+            </span>
+            <h2 class="section-title" style="margin-top: 0.5rem;">حاسبة المسار والمهارات المهنية</h2>
+            <p style="color: var(--text-muted); margin-bottom: 2rem;">
+              حدّد عدد الساعات التدريبية التي ترغب في استثمارها والمجال المطلوب لمعرفة مدة التأهيل المتوقعة ونسبة التطبيق العملي.
+            </p>
+
+            <div class="calc-form-group">
+              <label class="calc-label" for="calcSectorSelect">المجال المهني المستهدف:</label>
+              <select id="calcSectorSelect" class="custom-select">
+                <option value="tech">تكنولوجيا المعلومات والشبكات</option>
+                <option value="health">الرعاية الصحية والتمريض</option>
+                <option value="energy">الطاقة الشمسية والكهرباء</option>
+                <option value="design">التصميم والوسائط الرقمية</option>
+              </select>
+            </div>
+
+            <div class="calc-form-group">
+              <label class="calc-label" for="calcHoursSlider">
+                عدد الساعات المستهدفة: <span id="calcHoursVal" style="color: var(--color-accent); font-weight: 800;">200 ساعة تدريبية</span>
+              </label>
+              <input type="range" id="calcHoursSlider" class="range-slider" min="100" max="500" step="20" value="200">
+            </div>
+          </div>
+
+          <div class="calc-results">
+            <div class="result-box-title">المدة الزمانية المتوقعة للإنجاز</div>
+            <div class="result-main-value" id="calcResWeeks">17 أسابيع</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">بواقع 12-15 ساعة تدريبية أسبوعياً في المختبرات</p>
+
+            <div class="result-sub-metrics">
+              <div>
+                <div class="result-box-title">نسبة التطبيق العملي</div>
+                <div class="sub-metric-val" id="calcResPractical">80% تطبيق عملي</div>
+              </div>
+              <div>
+                <div class="result-box-title">مؤشر الجاهزية لسوق العمل</div>
+                <div class="sub-metric-val" id="calcResReadiness" style="color: #34d399;">95% جاهزية سريعة</div>
+              </div>
+            </div>
+
+            <div style="margin-top: 1.5rem;">
+              <button class="btn-accent" style="width: 100%;" onclick="openEnrollmentModal()">
+                احجز مقعدك في هذا المسار الآن
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practical Workshops Section -->
+  <section id="workshops" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">التدريب الميداني المباشر</span>
+        <h2 class="section-title">جدول الورش والمختبرات التطبيقية القادمة</h2>
+        <p class="section-subtitle">جلسات عمل مجانية ومكثفة يقدّمها نخبة من المدربين المعتمدين والمشرفين الميدانيين.</p>
+      </div>
+
+      <div id="workshopsContainer" class="workshops-list">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Accreditation & Certificate Section -->
+  <section id="accreditation" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">جودة واعتماد التعليم</span>
+        <h2 class="section-title">اعتمادات المعهد والمعايير الدولية</h2>
+        <p class="section-subtitle">تخضع كافة البرامج التدريبية لمعايير الضبط المهني لضمان قبول شهادتك محلياً ودولياً.</p>
+      </div>
+
+      <div class="accreditation-grid">
+        <div class="glass-panel accred-card">
+          <div class="accred-icon"><i class="fas fa-stamp"></i></div>
+          <h4 style="font-size: 1.1rem;">اعتماد رسمي موثق</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">شهادات مختومة وقابلة للتحقق الرقمي عبر رمز QR الفريد الخاص بكل طالب.</p>
+        </div>
+
+        <div class="glass-panel accred-card">
+          <div class="accred-icon"><i class="fas fa-microscope"></i></div>
+          <h4 style="font-size: 1.1rem;">مختبرات تخصصية</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">معدات ورش حديثة تحاكي بيئة المستشفيات، شركات الشبكات، ومواقع الطاقة.</p>
+        </div>
+
+        <div class="glass-panel accred-card">
+          <div class="accred-icon"><i class="fas fa-handshake"></i></div>
+          <h4 style="font-size: 1.1rem;">شراكات توظيف</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">شبكة ارتباط مع مؤسسات وشركات قطاعية لتزويدهم بالكوادر المؤهلة فور التخرج.</p>
+        </div>
+
+        <div class="glass-panel accred-card">
+          <div class="accred-icon"><i class="fas fa-globe"></i></div>
+          <h4 style="font-size: 1.1rem;">معايير الجودة ISO</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">منظومة تدريب معتمدة توافق المعايير الدولية في التعليم والتدريب المهني.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">قصص نجاح خريجينا</span>
+        <h2 class="section-title">ماذا يقول طلاب المعهد؟</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+        <div class="glass-panel testimonial-card">
+          <p class="testimonial-text">
+            "دبلوم الأمن السيبراني في معهد آفاق المستقبل كان النقطة الفاصلة في مسيرتي. الجانب العملي بالمختبرات مكنني من الحصول على فرصة عمل كمحلل شبكات فور تخرجي."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">أم</div>
+            <div class="author-details">
+              <h5>أحمد المحمدي</h5>
+              <p>خريج دبلوم الأمن السيبراني - يعمل أخصائي حماية بيانات</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-panel testimonial-card">
+          <p class="testimonial-text">
+            "التدريب على محاكاة التمريض والرعاية الطبية أعطاني ثقة كاملة أثناء التعامل مع الحالات الحرجة. المعهد مجهز بأسلوب احترافي جداً والتقديم كان سهلاً وبدون رسوم معقدة."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">نر</div>
+            <div class="author-details">
+              <h5>نور الهدى العلي</h5>
+              <p>خريجة دبلوم التمريض المهني - مسعفة في مركز طوارئ</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-panel testimonial-card">
+          <p class="testimonial-text">
+            "ورش الطاقة الشمسية كانت غنية بالتطبيقات الميدانية. تعلمت تركيب المحولات وحساب الأحمال بشكل دقيق، واليوم أقود فريق تركيبات هندسية."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">عك</div>
+            <div class="author-details">
+              <h5>عمر الكردي</h5>
+              <p>خريج دبلوم الطاقة المتجددة - مشغّل مشاريع طاقة</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion Section -->
+  <section id="faq" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">إجابات استفساراتكم</span>
+        <h2 class="section-title">الأسئلة الشائعة</h2>
+        <p class="section-subtitle">إليك الإجابات الشاملة على أبرز الأسئلة المتعلقة بنظام التسجيل والتدريب بالمعهد.</p>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item glass-panel open">
+          <button class="faq-question">
+            <span>هل يتطلب التسجيل عبر الموقع أي عمليات دفع أو اشتراك مالي؟</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            لا مطلقاً، عملية تقديم الطلب والتسجيل المبدئي عبر المنصة إلكترونية 100% وبدون أي رسوم دفع إلكتروني أو اشتراكات. يتم تقديم الطلب مجاناً ليقوم قسم القبول بالتواصل معك وإحاطتك بكافة التفاصيل.
+          </div>
+        </div>
+
+        <div class="faq-item glass-panel">
+          <button class="faq-question">
+            <span>ما هي شروط التقديم والقبول في دبلومات المعهد؟</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            يشترط وجود الشغف والرغبة الجادة في التعلم المهني. تختلف الشروط المباشرة حسب التخصص، حيث تطلب بعض الدبلومات شهادة الثانوية العامة بينما تكتفي دبلومات أخرى بإتقان المهارات الأساسية.
+          </div>
+        </div>
+
+        <div class="faq-item glass-panel">
+          <button class="faq-question">
+            <span>هل الشهادات الصادرة من المعهد معتمدة رسمياً؟</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            نعم، جميع شهادات معهد آفاق المستقبل معتمدة رسمياً ومزودة برقم تسلسلي فريد ورمز QR مخصص للتحقق الإلكتروني من صحتها لدى جهات العمل والمؤسسات.
+          </div>
+        </div>
+
+        <div class="faq-item glass-panel">
+          <button class="faq-question">
+            <span>كيف يتم تطبيق الساعات العملية أثناء فترة الدراسة؟</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            يعتمد نظام المعهد على أسلوب (التطبيق أولاً)، حيث تُمضي ما بين 65% إلى 85% من إجمالي ساعات الدبلوم في الورش والمختبرات العملية المجهزة بأحدث التقنيات والمعدات.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="logo-text">
+              معهد آفاق المستقبل
+              <span>للتدريب والتعليم المهني</span>
+            </div>
+          </a>
+          <p>
+            صرح تعليمي مهني رائد يُعنى بتأهيل الكوادر وتنمية المهارات التقنية والحرفية المعتمدة وفق أعلى معايير الجودة العالمية.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">روابط السريعة</h4>
+          <ul class="footer-links">
+            <li><a href="#hero" class="footer-link">عن المعهد</a></li>
+            <li><a href="#courses" class="footer-link">دليل التخصصات</a></li>
+            <li><a href="#calculator" class="footer-link">حاسبة المسار المهني</a></li>
+            <li><a href="#workshops" class="footer-link">جدول الورش</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">الأقسام التدريبية</h4>
+          <ul class="footer-links">
+            <li><a href="#courses" class="footer-link">الأمن السيبراني والبرمجة</a></li>
+            <li><a href="#courses" class="footer-link">التمريض والرعاية الصحية</a></li>
+            <li><a href="#courses" class="footer-link">الطاقة الشمسية والكهرباء</a></li>
+            <li><a href="#courses" class="footer-link">التصميم الجرافيكي والواجهات</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">تواصل مع قسم القبول</h4>
+          <ul class="footer-links">
+            <li class="footer-link"><i class="fas fa-phone-alt" style="color: var(--color-accent); margin-left: 0.5rem;"></i> هاتف: 800-400-9000</li>
+            <li class="footer-link"><i class="fas fa-envelope" style="color: var(--color-accent); margin-left: 0.5rem;"></i> البريد: info@horizons-inst.edu</li>
+            <li class="footer-link"><i class="fas fa-map-marker-alt" style="color: var(--color-accent); margin-left: 0.5rem;"></i> المقر الرئيسي: مجمع التدريب والتقنية</li>
+            <li class="footer-link" style="color: #34d399; font-weight: 700; margin-top: 0.5rem;">
+              <i class="fas fa-shield-alt"></i> التقديم مجاني 100% وبدون رسوم دفع
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>جميع الحقوق محفوظة © 2026 - معهد آفاق المستقبل للتدريب والتعليم المهني</div>
+        <div>مصمّم بأفضل معايير UI/UX والأداء بدون أي تبعيات خارجية</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Course Details Modal -->
+  <div id="courseDetailsModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close-btn" aria-label="إغلاق"><i class="fas fa-times"></i></button>
+      <div id="courseDetailsContent">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Direct Registration / Enrollment Modal -->
+  <div id="enrollmentModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close-btn" aria-label="إغلاق"><i class="fas fa-times"></i></button>
+      
+      <div id="enrollmentFormContainer">
+        <span class="modal-header-tag">استمارة التحاق جديدة</span>
+        <h2 class="modal-title">طلب تسجيل مبدئي (بدون أي رسوم)</h2>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
+          قدم بياناتك وسيصلك تأكيد فوري برقم الطلب المرجعي للتواصل المباشر مع قسم القبول بالمعهد.
+        </p>
+
+        <form id="enrollmentForm">
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label class="form-label" for="modalCourseSelect">اختر الدبلوم/البرنامج التدريبي *</label>
+              <select id="modalCourseSelect" class="form-input" required>
+                <option value="دبلوم الأمن السيبراني والشبكات الذكية">دبلوم الأمن السيبراني والشبكات الذكية</option>
+                <option value="مسار تطوير تطبيقات الويب والذكاء الاصطناعي">مسار تطوير تطبيقات الويب والذكاء الاصطناعي</option>
+                <option value="دبلوم التمريض المهني والرعاية الصحية الأولية">دبلوم التمريض المهني والرعاية الصحية الأولية</option>
+                <option value="فني مختبرات وتحاليل طبية وصيدلانية">فني مختبرات وتحاليل طبية وصيدلانية</option>
+                <option value="دبلوم الطاقة الشمسية والأنظمة الكهروضوئية">دبلوم الطاقة الشمسية والأنظمة الكهروضوئية</option>
+                <option value="التمديدات الكهربائية الذكية ولوحات التحكم">التمديدات الكهربائية الذكية ولوحات التحكم</option>
+                <option value="دبلوم التصميم الجرافيكي واجهات UI/UX">دبلوم التصميم الجرافيكي واجهات UI/UX</option>
+                <option value="إدارة الأعمال والخدمات اللوجستية المهنية">إدارة الأعمال والخدمات اللوجستية المهنية</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="studentName">الاسم الكامل للمتقدم *</label>
+              <input type="text" id="studentName" class="form-input" placeholder="مثال: أحمد عبد الله العلي" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="studentPhone">رقم الجوال / الواتساب *</label>
+              <input type="tel" id="studentPhone" class="form-input" placeholder="05XXXXXXXX" required>
+            </div>
+
+            <div class="form-group full-width">
+              <label class="form-label" for="studentEmail">البريد الإلكتروني (اختياري)</label>
+              <input type="email" id="studentEmail" class="form-input" placeholder="name@example.com">
+            </div>
+          </div>
+
+          <div style="margin-top: 1.5rem; background: rgba(59, 130, 246, 0.08); padding: 0.85rem 1rem; border-radius: var(--radius-md); font-size: 0.825rem; color: var(--text-muted); border: 1px solid rgba(59, 130, 246, 0.2);">
+            <i class="fas fa-lock" style="color: #34d399; margin-left: 0.35rem;"></i> لا تتطلب هذه العملية أي بطاقة ائتمان أو دفع مالي. التقديم مجاني ومباشر.
+          </div>
+
+          <div style="margin-top: 1.75rem; display: flex; gap: 1rem; justify-content: flex-end;">
+            <button type="button" class="btn-outline modal-close-trigger">إلغاء</button>
+            <button type="submit" class="btn-accent">
+              تأكيد وإرسال الطلب <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </form>
+
+        <div id="enrollmentConfirmation" style="display: none;">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript App File -->
+  <script src="app.js"></script>
+</body>
+</html>
